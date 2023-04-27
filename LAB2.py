@@ -1,5 +1,5 @@
 print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
-
+import statistics
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5, 67, 32)")
 
@@ -26,10 +26,20 @@ def calc_min_max_temperature():
     return minmax
 
 def sort_temperature():
-    print("sort_temperature")
+    x = numbers.sort(reverse=False)
+    #Ascending order
+    return x
 
 def calc_median_temperature():
-    print("calc_median_temperature")
+    # n = len(numbers)
+    # sortedlist = sort_temperature()
+    # y = (n-1) / 2
+    # median = sortedlist[y]
+    # print("Hi" + str(median))
+    median = statistics.median(numbers)
+    print(median)
 
 
-calc_min_max_temperature()
+numbers = get_user_input()
+
+calc_median_temperature()
